@@ -4071,7 +4071,7 @@ GLFWAPI int glfwVulkanSupported(void);
  */
 GLFWAPI const char** glfwGetRequiredInstanceExtensions(uint32_t* count);
 
-#if defined(VK_VERSION_1_0)
+#if 1
 
 /*! @brief Returns the address of the specified Vulkan instance function.
  *
