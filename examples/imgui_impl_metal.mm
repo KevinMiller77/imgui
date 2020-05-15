@@ -19,7 +19,7 @@
 //  2018-11-30: Misc: Setting up io.BackendRendererName so it can be displayed in the About Window.
 //  2018-07-05: Metal: Added new Metal backend implementation.
 
-#include "imgui.h"
+#include "../imgui.h"
 #include "imgui_impl_metal.h"
 
 #import <Metal/Metal.h>
@@ -539,7 +539,7 @@ void ImGui_ImplMetal_DestroyDeviceObjects()
         indexBufferOffset += cmd_list->IdxBuffer.Size * sizeof(ImDrawIdx);
     }
 
-    __weak id weakSelf = self;
+    id weakSelf = self;
     [commandBuffer addCompletedHandler:^(id<MTLCommandBuffer>)
     {
         dispatch_async(dispatch_get_main_queue(), ^{
